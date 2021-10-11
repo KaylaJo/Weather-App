@@ -1,0 +1,166 @@
+.app-wrapper {
+  padding: 20px 10px;
+  max-width: 950px;
+  font-family: "Urbanist", sans-serif;
+}
+
+.weather-app{
+  border: 2px solid rgb(215, 205, 219);
+  border-radius: 40px;
+  padding: 20px 10px;
+  max-width: 950px;
+  background: linear-gradient(
+    109.6deg,
+    rgb(245, 239, 249) 30.1%,
+    rgb(207, 211, 236) 100.2%
+  );
+}
+  
+.form-control {
+  border: 1px solid #ffcef3;
+  border-radius: 40px;
+  background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  padding: 10px;
+}
+
+#search-button {
+  border: 1px solid#ffcef3;
+  background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.locationButton {
+  border: 1px solid#ffcef3;
+  background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  border-radius: 50%;
+  padding: 10px;
+}
+
+h1 {
+  color: #27296d;
+  font-size: 50px;
+  margin: 0;
+  font-weight: bold;
+}
+
+h2 {
+  color: #27296d;
+  font-size: 22px;
+  padding: 0;
+  margin: 0;
+}
+
+span.time {
+  color: #27296d;
+  font-size: 25px;
+  padding: 0;
+  margin: 0;
+}
+
+.main-icon {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 15px;
+  color: #a393eb;
+}
+
+h4 {
+  color: #27296d;
+  font-size: 30px;
+  margin: 5px 0 5px 0;
+  padding: 10px 0 0 0;
+}
+
+h5 {
+  display: inline;
+  color: #ffcc00;
+  font-size: 35px;
+  padding: 0 0 7px 0;
+}
+
+#fahrenheit {
+  color: #27296d;
+  font-size: 22px;
+}
+
+#celsius {
+  color: #27296d;
+  font-size: 22px;
+}
+
+span.divide {
+  color: #27296d;
+  font-size: 22px;
+}
+
+h6 {
+  color: #27296d;
+  font-size: 25px;
+  padding: 10px 0 0 0;
+}
+
+.tonightTemp {
+  color: #27296d;
+  font-size: 22px;
+}
+
+.tonightIcon {
+  font-size: 20px;
+}
+
+.row {
+  margin: 30px;
+}
+
+.currentWeather {
+  padding: 0 200px;
+}
+
+.current {
+  margin: 40px 0px 40px 0px;
+  padding: 5px;
+}
+
+.today {
+  margin: 40px 0px 40px 0px;
+  padding: 10px 0 0 50px;
+}
+
+.col-6 {
+  text-align: center;
+}
+
+.col-2 {
+  color: #27296d;
+  border: 1px solid #ffcef3;
+  border-radius: 50%;
+  text-align: Center;
+  padding: 30px 0px;
+  background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+.weekAhead {
+  font-size: 17px;
+}
+
+.high {
+  color: #ffcc00;
+  padding: 7px;
+}
+
+.low {
+  color: #5e63b6;
+  padding: 7px;
+}
+
+.icon {
+  font-size: 30px;
+}
+
+footer{
+  font-size: 18px;
+  text-align:center;
+}
