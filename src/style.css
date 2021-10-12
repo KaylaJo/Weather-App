@@ -87,13 +87,15 @@ h5 {
 }
 
 #fahrenheit {
-  color: #27296d;
+  color: #a393eb;
   font-size: 22px;
+ 
 }
 
 #celsius {
-  color: #27296d;
+  color: #a393eb;
   font-size: 22px;
+  
 }
 
 span.divide {
@@ -139,8 +141,15 @@ h6 {
 }
 .degreeUnits{
   position: relative; 
-  top:-8px;
+  top:-8px; 
+  
 }
+.degreeUnits .active {
+  cursor:default;
+  text-decoration: none;
+}
+
+
 .col-2 {
   color: #27296d;
   border: 1px solid #ffcef3;

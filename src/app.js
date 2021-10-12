@@ -30,9 +30,9 @@ function getTemp(response) {
   let wind = Math.round(response.data.wind.speed);
   let windSpeed = document.querySelector(".windSpeed");
   windSpeed.innerHTML = `Wind Speed: ${wind} mph `;
-  let searchTemp = Math.round(response.data.main.temp);
+  temperature = response.data.main.temp;
   let h5 = document.querySelector("h5");
-  h5.innerHTML = `${searchTemp}°`;
+  h5.innerHTML = `${Math.round(temperature)}°`;
   let nightTemp = Math.round(response.data.main.temp_min);
   let tonightTemp = document.querySelector(".tonightTemp");
   tonightTemp.innerHTML = `${nightTemp}°`;
@@ -76,15 +76,23 @@ button.addEventListener("click", getCurrentLocation);
 
 function convertCelsius(event) {
   event.preventDefault();
+  celsius.classList.add("active");
+  fahrenheit.classList.remove("active");
   let h5 = document.querySelector("h5");
-  //let celsiusTemp = Math.round(fahrenheitTemp - 32) / 1.8;
-  h5.innerHTML = `test1`;
+  let celsiusTemp = Math.round((temperature - 32) / 1.8);
+  h5.innerHTML = `${celsiusTemp}°`;
 }
+
 function convertFahrenheit(event) {
   event.preventDefault();
+  celsius.classList.remove("active");
+  fahrenheit.classList.add("active");
   let h5 = document.querySelector("h5");
-  h5.innerHTML = `test2`;
+  let FahrenheitTemp = Math.round(temperature);
+  h5.innerHTML = `${FahrenheitTemp}°`;
 }
+
+let temperature = null;
 
 let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", convertCelsius);
