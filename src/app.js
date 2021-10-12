@@ -33,10 +33,9 @@ function getTemp(response) {
   temperature = response.data.main.temp;
   let h5 = document.querySelector("h5");
   h5.innerHTML = `${Math.round(temperature)}°`;
-  let nightTemp = Math.round(response.data.main.temp_min);
-  let tonightTemp = document.querySelector(".tonightTemp");
-  tonightTemp.innerHTML = `${nightTemp}°`;
-
+  todayLowTemp = response.data.main.temp_min;
+  let lowTemp = document.querySelector(".lowTemp");
+  lowTemp.innerHTML = `${Math.round(todayLowTemp)}°`;
 }
 
 
@@ -81,6 +80,9 @@ function convertCelsius(event) {
   let h5 = document.querySelector("h5");
   let celsiusTemp = Math.round((temperature - 32) / 1.8);
   h5.innerHTML = `${celsiusTemp}°`;
+  let lowTemp = document.querySelector(".lowTemp");
+  let tonightCelsiusTemp = Math.round((todayLowTemp - 32) / 1.8);
+  lowTemp.innerHTML = `${tonightCelsiusTemp}°`;
 }
 
 function convertFahrenheit(event) {
@@ -90,9 +92,13 @@ function convertFahrenheit(event) {
   let h5 = document.querySelector("h5");
   let FahrenheitTemp = Math.round(temperature);
   h5.innerHTML = `${FahrenheitTemp}°`;
+  let lowTemp = document.querySelector(".lowTemp");
+  let tonightFahrenheitTemp = Math.round(todayLowTemp);
+  lowTemp.innerHTML = `${tonightFahrenheitTemp}°`;
 }
 
 let temperature = null;
+let todayLowTemp = null;
 
 let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", convertCelsius);

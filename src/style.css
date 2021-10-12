@@ -106,16 +106,14 @@ span.divide {
 h6 {
   color: #27296d;
   font-size: 25px;
-  padding: 10px 0 0 0;
+  padding: 5px 0;
+  margin:0 ;
 }
 
-.tonightTemp {
+.lowTemp {
   color: #27296d;
-  font-size: 22px;
-}
-
-.tonightIcon {
-  font-size: 20px;
+  font-size: 27px;
+  
 }
 
 .row {
