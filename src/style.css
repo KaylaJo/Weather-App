@@ -2,6 +2,7 @@
   padding: 20px 10px;
   max-width: 950px;
   font-family: "Urbanist", sans-serif;
+  margin: 0 auto;
 }
 
 .weather-app{
@@ -14,6 +15,7 @@
     rgb(245, 239, 249) 30.1%,
     rgb(207, 211, 236) 100.2%
   );
+  
 }
   
 .form-control {
@@ -39,25 +41,25 @@
 
 h1 {
   color: #27296d;
-  font-size: 50px;
+  font-size: 40px;
   margin: 0;
   font-weight: bold;
 }
 
-h2 {
-  color: #27296d;
-  font-size: 22px;
-  padding: 0;
-  margin: 0;
-}
 
 span.time {
+    color: #27296d;
+    font-size: 22px;
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
   color: #27296d;
-  font-size: 25px;
+  font-size: 27px;
   padding: 0;
   margin: 0;
 }
-
 .main-icon {
   font-size: 40px;
 }
@@ -65,11 +67,15 @@ span.time {
 h3 {
   font-size: 15px;
   color: #a393eb;
+  margin: 0;
+  padding: 0;
 }
 
 .windSpeed {
     font-size: 15px;
     color: #a393eb;
+    margin: 0;
+    padding:0;
 }
 
 h4 {
@@ -131,11 +137,12 @@ h6 {
 
 .today {
   margin: 40px 0px 40px 0px;
-  padding: 0px;
+  padding: 20px;
 }
 
 .col-6 {
   text-align: center;
+
 }
 .degreeUnits{
   position: relative; 
