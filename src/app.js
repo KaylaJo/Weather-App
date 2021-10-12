@@ -15,7 +15,7 @@ let minutes = (`0` + now.getMinutes()).slice(-2);
 let currentTime = document.querySelector("span.time");
 currentTime.innerHTML = `${day} ${hours} : ${minutes}`;
 
-//search for city and show city and current temp
+
 
 function getTemp(response) {
   let citySearch = response.data.name;
@@ -36,7 +36,9 @@ function getTemp(response) {
   let nightTemp = Math.round(response.data.main.temp_min);
   let tonightTemp = document.querySelector(".tonightTemp");
   tonightTemp.innerHTML = `${nightTemp}°`;
+
 }
+
 
 function search(city) {
   let apiKey = "58a6775f97527351bf6c6966e209be39";
@@ -56,7 +58,7 @@ function enterCity(event) {
 let typeCity = document.querySelector("#search-form");
 typeCity.addEventListener("submit", enterCity);
 
-function location(position) {
+function findLocation(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
   let apiKey = "58a6775f97527351bf6c6966e209be39";
@@ -65,11 +67,30 @@ function location(position) {
   axios.get(apiUrl).then(getTemp);
 }
 function getCurrentLocation() {
-  navigator.geolocation.getCurrentPosition(location);
+  navigator.geolocation.getCurrentPosition(findLocation);
 }
 
 let button = document.querySelector(".locationButton");
 button.addEventListener("click", getCurrentLocation);
+
+
+function convertCelsius(event) {
+  event.preventDefault();
+  let h5 = document.querySelector("h5");
+  //let celsiusTemp = Math.round(fahrenheitTemp - 32) / 1.8;
+  h5.innerHTML = `test1`;
+}
+function convertFahrenheit(event) {
+  event.preventDefault();
+  let h5 = document.querySelector("h5");
+  h5.innerHTML = `test2`;
+}
+
+let celsius = document.querySelector("#celsius");
+celsius.addEventListener("click", convertCelsius);
+
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", convertFahrenheit);
 
 search("Chicago");
 
