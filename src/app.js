@@ -1,4 +1,3 @@
-//display current time
 let now = new Date();
 let days = [
   "Sunday",
@@ -22,13 +21,15 @@ function getTemp(response) {
   let citySearch = response.data.name;
   let h1 = document.querySelector("h1");
   h1.innerHTML = `${citySearch}`;
-  //document.querySelector("h1").innerHTML = response.data.name;
   let weather = response.data.weather[0].main;
   let h2 = document.querySelector("h2");
   h2.innerHTML = `${weather}`;
   let humidity = response.data.main.humidity;
   let h3 = document.querySelector("h3");
   h3.innerHTML = `Humidity: ${humidity} %`;
+  let wind = Math.round(response.data.wind.speed);
+  let windSpeed = document.querySelector(".windSpeed");
+  windSpeed.innerHTML = `Wind Speed: ${wind} mph `;
   let searchTemp = Math.round(response.data.main.temp);
   let h5 = document.querySelector("h5");
   h5.innerHTML = `${searchTemp}°`;
@@ -71,3 +72,8 @@ let button = document.querySelector(".locationButton");
 button.addEventListener("click", getCurrentLocation);
 
 search("Chicago");
+
+
+
+
+
