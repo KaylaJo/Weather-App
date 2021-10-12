@@ -20,8 +20,8 @@
       <div class="app-wrapper">
         <div class="weather-app">
           <div class="row">
-          <div class="col-10">
-            <form id ="search-form">
+            <div class="col-10">
+             <form id ="search-form">
               <input type ="search"
               id="city-search"
               class="form-control"
@@ -29,25 +29,25 @@
               placeholder="Type to search..."
               autofocus="on"
               >
-            <datalist id="datalistOptions">
+              <datalist id="datalistOptions">
               <option value="San Francisco"></option>
               <option value="New York"></option>
               <option value="Seoul"></option>
               <option value="London"></option>
               <option value="Chicago"></option>
               </datalist>
-          </div>
+             </form>
+            </div>
             <div class="col-1">
               <input type="submit" id="search-button" value="🔎" >
-              </div>
+            </div>
             <div class="col-1">
               <button class = "locationButton" >📍
               </button>
-              </div>
-            </form>
-        </div>
-        <div class="row currentWeather">
-          <div class="col-6 current">
+            </div>
+           </div>
+          <div class="row currentWeather">
+           <div class="col-6 current">
             <h1>Chicago</h1>
             <span class="time">Time</span>
             <h2>Partly Cloudy</h2>
@@ -55,60 +55,61 @@
             <br />
             <h3>Humidity: 40%</h3>
             <p class=windSpeed>Wind Speed:</p>
-          </div>
-          <div class="col-6 today">
+           </div>
+           <div class="col-6 today">
             <h4>Today</h4>
             <h5>80° </h5>
-            <div>
+            <span class ="degreeUnits">
             <a href id ="fahrenheit"= ""> F</a> 
             <span class = "divide">|</span>
             <a href id="celsius" =""> C</a>
+            </span>
             <h6>Tonight</h6>
             <span class="tonightTemp">63° </span>
             <!--<span class="tonightIcon">🌧 </span> Do I want to include tonight icon? -->
-          </div>
-        </div>
-        <div class="row weekAhead">
-          <div class="col-2">
-            Mon <br />
-            <span class="high">76°</span>
-            <span class="low">63°</span><br />
-            <div class="icon">☀️</div>
-          </div>
-          <div class="col-2">
-            Tue <br />
-            <span class="high">86°</span>
-            <span class="low">60°</span><br />
-            <div class="icon">🌧</div>
-          </div>
-          <div class="col-2">
-            Wed <br />
-            <span class="high">78°</span>
-            <span class="low">60°</span><br />
-            <div class="icon">🌤</div>
-          </div>
-          <div class="col-2">
-            Thu<br />
-            <span class="high">76°</span>
-            <span class="low">60°</span><br />
-            <div class="icon">🌤</div>
-          </div>
-          <div class="col-2">
-            Fri<br />
-            <span class="high">77°</span>
-            <span class="low">62°</span><br />
-            <div class="icon">🌤</div>
-          </div>
-          <div class="col-2">
-            Sat<br />
-            <span class="high">79°</span>
-            <span class="low">63°</span><br />
-            <div class="icon">🌤</div>
+            </div>
+           </div>
+          <div class="row weekAhead">
+            <div class="col-2">
+             Mon <br />
+             <span class="high">76°</span>
+             <span class="low">63°</span><br />
+             <div class="icon">☀️</div>
+             </div>
+             <div class="col-2">
+              Tue <br />
+              <span class="high">86°</span>
+              <span class="low">60°</span><br />
+              <div class="icon">🌧</div>
+            </div>
+            <div class="col-2">
+              Wed <br />
+             <span class="high">78°</span>
+              <span class="low">60°</span><br />
+              <div class="icon">🌤</div>
+            </div>
+            <div class="col-2">
+             Thu<br />
+             <span class="high">76°</span>
+             <span class="low">60°</span><br />
+             <div class="icon">🌤</div>
+            </div>
+            <div class="col-2">
+             Fri<br />
+                <span class="high">77°</span>
+                <span class="low">62°</span><br />
+             <div class="icon">🌤</div>
+            </div>
+            <div class="col-2">
+             Sat<br />
+                <span class="high">79°</span>
+                <span class="low">63°</span><br />
+                <div class="icon">🌤</div>
+            </div>
           </div>
         </div>
       </div>
-        <footer><a href= "https://github.com/KaylaJo/Weather-App" class ="sourceCodeLink" target ="_blank" rel="noreferrer">Open source code</a> by Kayla J. Cupp</footer>
-      </div>
+       <footer><a href= "https://github.com/KaylaJo/Weather-App" class ="sourceCodeLink" target ="_blank" rel="noreferrer">Open source code</a> by Kayla J. Cupp</footer>
     </div>
     <script src="src/app.js"> </script>
 </body>

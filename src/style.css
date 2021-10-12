@@ -7,7 +7,7 @@
 .weather-app{
   border: 2px solid rgb(215, 205, 219);
   border-radius: 40px;
-  padding: 20px 10px;
+  padding: 0px 10px;
   max-width: 950px;
   background: linear-gradient(
     109.6deg,
@@ -126,18 +126,21 @@ h6 {
 
 .current {
   margin: 40px 0px 40px 0px;
-  padding: 5px;
+  padding: 0px;
 }
 
 .today {
   margin: 40px 0px 40px 0px;
-  padding: 10px 0 0 50px;
+  padding: 0px;
 }
 
 .col-6 {
   text-align: center;
 }
-
+.degreeUnits{
+  position: relative; 
+  top:-8px;
+}
 .col-2 {
   color: #27296d;
   border: 1px solid #ffcef3;
