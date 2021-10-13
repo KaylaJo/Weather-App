@@ -1,4 +1,5 @@
-let now = new Date();
+function getDate(timestamp){
+let now = new Date(timestamp);
 let days = [
   "Sunday",
   "Monday",
@@ -13,9 +14,9 @@ let hours = now.getHours();
 let minutes = (`0` + now.getMinutes()).slice(-2);
 
 let currentTime = document.querySelector("span.time");
-currentTime.innerHTML = `${day} ${hours} : ${minutes}`;
+return `${day} ${hours} : ${minutes}`;
 
-
+}
 
 function getTemp(response) {
   let citySearch = response.data.name;
@@ -36,6 +37,16 @@ function getTemp(response) {
   todayLowTemp = response.data.main.temp_min;
   let lowTemp = document.querySelector(".lowTemp");
   lowTemp.innerHTML = `${Math.round(todayLowTemp)}°`;
+
+  let now = new Date();
+  let localTime = now.getTime();
+  let localOffset = now.getTimezoneOffset() * 60000;
+  let utc = localTime + localOffset;
+  let local = utc + 1000 * response.data.timezone;
+  let cityTime = new Date(local);
+
+  let updatedTime = document.querySelector("span.time");
+  updatedTime.innerHTML = getDate(cityTime);
 }
 
 
