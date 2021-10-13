@@ -40,7 +40,7 @@
 }
 
 h1 {
-  color: #27296d;
+  color: #040c6b;
   font-size: 40px;
   margin: 0;
   font-weight: bold;
@@ -48,14 +48,14 @@ h1 {
 
 
 span.time {
-    color: #27296d;
+    color: #040c6b;
     font-size: 22px;
     padding: 0;
     margin: 0;
 }
 
 h2 {
-  color: #27296d;
+  color: #040c6b;
   font-size: 27px;
   padding: 0;
   margin: 0;
@@ -66,20 +66,20 @@ h2 {
 
 h3 {
   font-size: 15px;
-  color: #a393eb;
+  color: #040c6b;
   margin: 0;
   padding: 0;
 }
 
 .windSpeed {
     font-size: 15px;
-    color: #a393eb;
+    color: #040c6b;
     margin: 0;
     padding:0;
 }
 
 h4 {
-  color: #27296d;
+  color: #040c6b;
   font-size: 30px;
   margin: 5px 0 5px 0;
   padding: 10px 0 0 0;
@@ -93,31 +93,31 @@ h5 {
 }
 
 #fahrenheit {
-  color: #a393eb;
+  color: #040c6b;
   font-size: 22px;
  
 }
 
 #celsius {
-  color: #a393eb;
+  color: #040c6b;
   font-size: 22px;
   
 }
 
 span.divide {
-  color: #27296d;
+  color: #040c6b;
   font-size: 22px;
 }
 
 h6 {
-  color: #27296d;
+  color: #040c6b;
   font-size: 25px;
   padding: 5px 0;
   margin:0 ;
 }
 
 .lowTemp {
-  color: #27296d;
+  color: #040c6b;;
   font-size: 27px;
   
 }
@@ -156,7 +156,7 @@ h6 {
 
 
 .col-2 {
-  color: #27296d;
+  color: #040c6b;
   border: 1px solid #ffcef3;
   border-radius: 50%;
   text-align: Center;

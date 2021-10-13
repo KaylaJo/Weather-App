@@ -37,6 +37,9 @@ function getTemp(response) {
   todayLowTemp = response.data.main.temp_min;
   let lowTemp = document.querySelector(".lowTemp");
   lowTemp.innerHTML = `${Math.round(todayLowTemp)}°`;
+  let mainIcon = response.data.weather[0].icon;
+  let todayIcon = document.querySelector(".main-icon");
+  todayIcon.innerHTML = `<img src = "icons/${mainIcon}.png"/>`;
 
   let now = new Date();
   let localTime = now.getTime();
