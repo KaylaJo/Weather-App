@@ -178,11 +178,13 @@ h6 {
   padding: 7px;
 }
 
-.icon {
-  font-size: 30px;
-}
-
 footer{
   font-size: 18px;
   text-align:center;
+  display:inline;
+  margin:0 120px;
+}
+.iconLink{
+    font-size:18px;
+    margin:0px 120px;
 }
