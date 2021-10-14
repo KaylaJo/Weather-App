@@ -41,9 +41,10 @@
 .col-1 img{
  height:30px;
 }
+
 h1 {
   color: #040c6b;
-  font-size: 40px;
+  font-size: 37px;
   margin: 0;
   font-weight: bold;
 }
@@ -58,23 +59,20 @@ span.time {
 
 h2 {
   color: #040c6b;
-  font-size: 27px;
+  font-size: 22px;
   padding: 0;
   margin: 0;
 }
-.main-icon {
-  height:40px;
-}
 
 h3 {
-  font-size: 15px;
+  font-size: 17px;
   color: #040c6b;
   margin: 0;
   padding: 0;
 }
 
 .windSpeed {
-    font-size: 15px;
+    font-size: 17px;
     color: #040c6b;
     margin: 0;
     padding:0;
@@ -82,7 +80,7 @@ h3 {
 
 h4 {
   color: #040c6b;
-  font-size: 30px;
+  font-size: 27px;
   margin: 5px 0 5px 0;
   padding: 10px 0 0 0;
 }
@@ -90,7 +88,7 @@ h4 {
 h5 {
   display: inline;
   color: #dab4fe;
-  font-size: 35px;
+  font-size: 45px;
   padding: 0 0 7px 0;
   
 }
@@ -114,14 +112,14 @@ span.divide {
 
 h6 {
   color: #040c6b;
-  font-size: 25px;
+  font-size: 22px;
   padding: 5px 0;
   margin:0 ;
 }
 
 .lowTemp {
   color: #96abff;
-  font-size: 27px;
+  font-size: 30px;
   
 }
 
@@ -130,31 +128,33 @@ h6 {
 }
 
 .currentWeather {
-  padding: 0 200px;
+  padding: 10px 210px
+  
 }
 
 .current {
-  margin: 40px 0px 40px 0px;
-  padding: 0px;
+  margin: 20px 0px 20px 0px;
+  padding: 10px 0px;
   text-align:center;
+  
 }
 
 .today {
-  margin: 40px 0px 40px 0px;
-  padding: 20px;
+  margin: 20px 0px 20px 0px;
+  padding: 10px 0px;
   text-align:center;
+  
 }
 
 .degreeUnits{
   position: relative; 
-  top:-8px; 
+  top:-15px; 
   
 }
 .degreeUnits .active {
   cursor:default;
   text-decoration: none;
 }
-
 
 .forecast {
   color: #040c6b;
