@@ -19,7 +19,7 @@
      <div class="container">
       <div class="app-wrapper">
         <div class="weather-app">
-          <div class="row">
+          <div class="row searchBar">
             <div class="col-10">
              <form id ="search-form">
               <input type ="search"
@@ -37,28 +37,28 @@
               <option value="Chicago"></option>
               </datalist>
             </div>
-            <div class="col-1">
-             <button class="search-button"> <img src = "icons/icons8-search.png"/></button>
+            <div class="col-1 searchIcons">
+             <button class="searchButton"> <img src = "icons/icons8-search.png"/></button>
             </div>
             </form>
-            <div class="col-1">
+            <div class="col-1 searchIcons">
               <button class = "locationButton" ><img src = "icons/location.png"/>
               </button>
             </div>
            </div>
           <div class="row currentWeather">
-           <div class="col-6 current">
-            <h1>Chicago</h1>
+           <div class="col-6 currentInfo">
+            <h1 class="cityName">Chicago</h1>
             <span class="time">-</span>
-            <h2>-</h2>
-            <span class="main-icon"></span>
+            <h2 class="weatherType">-</h2>
+            <span class="mainIcon"></span>
             <br />
-            <h3>-</h3>
+            <h3 class="humidity">-</h3>
             <p class=windSpeed>-</p>
            </div>
-           <div class="col-6 today">
+           <div class="col-6 todayWeather">
             <h4>Today</h4>
-            <h5>- </h5>
+            <h5 class="todayTemp">- </h5>
             <span class ="degreeUnits">
                 <a href="#" id ="fahrenheit" class="active"> F</a> 
                 <span class = "divide">|</span>
@@ -107,8 +107,8 @@
             </div>
           </div>
         </div>
-        <footer><a href= "https://github.com/KaylaJo/Weather-App" class ="sourceCodeLink" target ="_blank" rel="noreferrer">Open-source code on GitHub </a>. Coded by Kayla J. Cupp. Hosted on <a href= "https://www.netlify.com" class ="netlifyLink" target ="_blank" rel="noreferrer">Netlify</a>.</footer>
-        <span class= "iconLink">Icons by <a href="https://icons8.com/icon/set/weather/ios" class="iconReferenceLink"target ="_blank" rel="noreferrer">icons8.com</a> </span>
+        <footer class="sourceLine"><a href= "https://github.com/KaylaJo/Weather-App" class ="sourceCodeLink" target ="_blank" rel="noreferrer">Open-source code on GitHub </a>. Coded by Kayla J. Cupp. Hosted on <a href= "https://www.netlify.com" class ="netlifyLink" target ="_blank" rel="noreferrer">Netlify</a>.</footer>
+        <span class= "iconsBy">Icons by <a href="https://icons8.com/icon/set/weather/ios" class="iconReferenceLink"target ="_blank" rel="noreferrer">icons8.com</a> </span>
      </div>
     </div>
     <script src="src/app.js"> </script>
