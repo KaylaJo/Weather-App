@@ -20,13 +20,13 @@
       <div class="app-wrapper">
         <div class="weather-app">
           <div class="row">
-            <div class="col-10">
+            <div class="col-9">
              <form id ="search-form">
               <input type ="search"
               id="city-search"
               class="form-control"
               list="datalistOptions"
-              placeholder="Type to search..."
+              placeholder="Search by city name..."
               autofocus="on"
               >
               <datalist id="datalistOptions">
@@ -36,13 +36,13 @@
               <option value="London"></option>
               <option value="Chicago"></option>
               </datalist>
-             </form>
             </div>
-            <div class="col-1">
-              <input type="submit" id="search-button" value="🔎" >
+            <div class="col-2">
+             <button class="search-button"> <img src = "icons/icons8-search.png"/></button>
             </div>
+            </form>
             <div class="col-1">
-              <button class = "locationButton" >📍
+              <button class = "locationButton" ><img src = "icons/location.png"/>
               </button>
             </div>
            </div>
@@ -51,7 +51,7 @@
             <h1>Chicago</h1>
             <span class="time">-</span>
             <h2>-</h2>
-            <span class="main-icon"><img src="https://img.icons8.com/ios/50/000000/clouds.png"/></span>
+            <span class="main-icon"></span>
             <br />
             <h3>-</h3>
             <p class=windSpeed>-</p>
@@ -69,37 +69,37 @@
             </div>
            </div>
           <div class="row weekAhead">
-            <div class="col-2">
+            <div class="col-2 forecast">
              Mon <br />
              <span class="high">76°</span>
              <span class="low">63°</span><br />
              <div class="icon"><img src="https://img.icons8.com/ios/50/000000/clouds.png"/></div>
              </div>
-             <div class="col-2">
+             <div class="col-2 forecast">
               Tue <br />
               <span class="high">86°</span>
               <span class="low">60°</span><br />
               <div class="icon"><img src="https://img.icons8.com/ios/50/000000/clouds.png"/></div>
             </div>
-            <div class="col-2">
+            <div class="col-2 forecast">
               Wed <br />
              <span class="high">78°</span>
               <span class="low">60°</span><br />
               <div class="icon"><img src="https://img.icons8.com/ios/50/000000/clouds.png"/></div>
             </div>
-            <div class="col-2">
+            <div class="col-2 forecast">
              Thu<br />
              <span class="high">76°</span>
              <span class="low">60°</span><br />
              <div class="icon"><img src="https://img.icons8.com/ios/50/000000/clouds.png"/></div>
             </div>
-            <div class="col-2">
+            <div class="col-2 forecast">
              Fri<br />
                 <span class="high">77°</span>
                 <span class="low">62°</span><br />
              <div class="icon"><img src="https://img.icons8.com/ios/50/000000/clouds.png"/></div>
             </div>
-            <div class="col-2">
+            <div class="col-2 forecast">
              Sat<br />
                 <span class="high">79°</span>
                 <span class="low">63°</span><br />
@@ -107,8 +107,8 @@
             </div>
           </div>
         </div>
-        <span class= "iconLink"> Icons by <a href="https://icons8.com/icon/set/weather/ios"target ="_blank" rel="noreferrer">icons8.com</a> </span>
-        <footer><a href= "https://github.com/KaylaJo/Weather-App" class ="sourceCodeLink" target ="_blank" rel="noreferrer">Open source code</a> by Kayla J. Cupp</footer>
+        <footer><a href= "https://github.com/KaylaJo/Weather-App" class ="sourceCodeLink" target ="_blank" rel="noreferrer">Open-source code on GitHub </a>. Coded by Kayla J. Cupp. Hosted on <a href= "https://www.netlify.com" class ="netlifyLink" target ="_blank" rel="noreferrer">Netlify</a>.</footer>
+        <span class= "iconLink">Icons by <a href="https://icons8.com/icon/set/weather/ios" class="iconReferenceLink"target ="_blank" rel="noreferrer">icons8.com</a> </span>
      </div>
     </div>
     <script src="src/app.js"> </script>

@@ -1,6 +1,6 @@
 .app-wrapper {
   padding: 20px 10px;
-  max-width: 950px;
+  max-width: 100%;
   font-family: "Urbanist", sans-serif;
   margin: 0 auto;
 }
@@ -14,31 +14,33 @@
     109.6deg,
     rgb(245, 239, 249) 30.1%,
     rgb(207, 211, 236) 100.2%
-  );
-  
+  ); 
 }
   
 .form-control {
-  border: 1px solid #ffcef3;
+  border: 2px solid #ffcef3;
   border-radius: 40px;
   background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
   padding: 10px;
 }
 
-#search-button {
-  border: 1px solid#ffcef3;
+.search-button {
+  border: 2px solid#ffcef3;
   background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
   border-radius: 50%;
   padding: 10px;
 }
 
 .locationButton {
-  border: 1px solid#ffcef3;
+  border: 2px solid#ffcef3;
   background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
   border-radius: 50%;
   padding: 10px;
 }
 
+.col-1 img{
+ height:30px;
+}
 h1 {
   color: #040c6b;
   font-size: 40px;
@@ -61,7 +63,7 @@ h2 {
   margin: 0;
 }
 .main-icon {
-  font-size: 40px;
+  height:40px;
 }
 
 h3 {
@@ -87,9 +89,10 @@ h4 {
 
 h5 {
   display: inline;
-  color: #ffcc00;
+  color: #dab4fe;
   font-size: 35px;
   padding: 0 0 7px 0;
+  
 }
 
 #fahrenheit {
@@ -117,7 +120,7 @@ h6 {
 }
 
 .lowTemp {
-  color: #040c6b;;
+  color: #96abff;
   font-size: 27px;
   
 }
@@ -133,17 +136,15 @@ h6 {
 .current {
   margin: 40px 0px 40px 0px;
   padding: 0px;
+  text-align:center;
 }
 
 .today {
   margin: 40px 0px 40px 0px;
   padding: 20px;
+  text-align:center;
 }
 
-.col-6 {
-  text-align: center;
-
-}
 .degreeUnits{
   position: relative; 
   top:-8px; 
@@ -155,7 +156,7 @@ h6 {
 }
 
 
-.col-2 {
+.forecast {
   color: #040c6b;
   border: 1px solid #ffcef3;
   border-radius: 50%;
@@ -169,12 +170,12 @@ h6 {
 }
 
 .high {
-  color: #ffcc00;
+   color: #dab4fe;
   padding: 7px;
 }
 
 .low {
-  color: #5e63b6;
+  color: #96abff;
   padding: 7px;
 }
 
@@ -182,9 +183,20 @@ footer{
   font-size: 18px;
   text-align:center;
   display:inline;
-  margin:0 120px;
+  color:#040c6b;
+  margin:0 50px;
+}
+.sourceCodeLink{
+  color:#040c6b;
 }
 .iconLink{
     font-size:18px;
-    margin:0px 120px;
+    color:#040c6b;
+    
+}
+.netlifyLink{
+    color:#040c6b;
+}
+.iconReferenceLink {
+    color:#040c6b;
 }
