@@ -1,20 +1,36 @@
 function getDate(timestamp){
 let now = new Date(timestamp);
 let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
+  "Sun",
+  "Mon",
+  "Tue",
+  "Wed",
+  "Thu",
+  "Fri",
+  "Sat",
 ];
+let months = [
+    "Jan.",
+    "Feb.",
+    "Mar.",
+    "Apr.",
+    "May.",
+    "Jun.",
+    "Jul.",
+    "Aug.",
+    "Sep.",
+    "Oct.",
+    "Nov.",
+    "Dec"
+]
+let month = months[now.getMonth()];
 let day = days[now.getDay()];
 let hours = now.getHours();
+let date = now.getDate();
 let minutes = (`0` + now.getMinutes()).slice(-2);
 
 let currentTime = document.querySelector("span.time");
-return `${day} ${hours} : ${minutes}`;
+return `${day}, ${month} ${date}, ${hours}:${minutes}`;
 
 }
 
