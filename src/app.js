@@ -64,8 +64,8 @@ function getTemp(response) {
   let local = utc + 1000 * response.data.timezone;
   let cityTime = new Date(local);
 
-  let updatedTime = document.querySelector("span.time");
-  updatedTime.innerHTML = getDate(cityTime);
+  let timeElement = document.querySelector("span.time");
+  timeElement.innerHTML = getDate(cityTime);
 }
 
 
