@@ -34,6 +34,26 @@ return `${day}, ${month} ${date}, ${hours}:${minutes}`;
 
 }
 
+function showWeekAheadForecast() {
+ let weekAheadForecast = document.querySelector("#weekAhead-Forecast");
+  
+ let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+ let weekAheadForecastHTML = `<div class=" row weekAhead">`;
+ days.forEach(function (day){    
+  weekAheadForecastHTML = weekAheadForecastHTML + ` 
+   <div class="col-2 weekForecast">
+   ${day} <br />
+   <span class="high">76°</span>
+   <span class="low">63°</span><br />
+   <div class="icon"><img src="https://img.icons8.com/ios/50/000000/clouds.png"/></div>
+   </div>
+   `;
+  });
+   
+   weekAheadForecastHTML = weekAheadForecastHTML + `</div>`;
+ weekAheadForecast.innerHTML = weekAheadForecastHTML;
+}
+
 function getTemp(response) {
   let citySearch = response.data.name;
   let cityName = document.querySelector(".cityName");
@@ -137,6 +157,7 @@ let fahrenheit = document.querySelector("#fahrenheit");
 fahrenheit.addEventListener("click", convertFahrenheit);
 
 search("Chicago");
+showWeekAheadForecast();
 
 
 
