@@ -60,9 +60,9 @@ function showWeekAheadForecast(response) {
   weekAheadForecastHTML = weekAheadForecastHTML + ` 
    <div class="col-2 weekForecast">
    ${formatDayForecast(forecastDay.dt)} <br />
-   <span class="high">${Math.round(forecastDay.temp.max)}°</span>
-   <span class="low">${Math.round(forecastDay.temp.min)}°</span><br />
-   <div class="icon"><img src = "icons/${forecastDay.weather[0].icon}.png"/>;</div>
+   <span class="weekHigh">${Math.round(forecastDay.temp.max)}°</span>
+   <span class="weekLow">${Math.round(forecastDay.temp.min)}°</span><br />
+   <div class="weekIcon"><img src = "icons/${forecastDay.weather[0].icon}.png"/></div>
    </div>
    `;
     }

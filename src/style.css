@@ -151,13 +151,10 @@ h6 {
   font-size: 30px;
 }
 
-.weekAhead {
-  font-size: 17px;
-}
-
 .weekForecast {
   color: #040c6b;
   border: 1px solid #ffcef3;
+  font-size: 20px;
   margin:10px 0px ;
   border-radius: 50%;
   text-align: Center;
@@ -165,12 +162,12 @@ h6 {
   background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
 
-.high {
-   color: #dab4fe;
+.weekHigh {
+  color: #dab4fe;
   padding: 7px;
 }
 
-.low {
+.weekLow {
   color: #96abff;
   padding: 7px;
 }
@@ -180,7 +177,7 @@ h6 {
   text-align:center;
   display:inline;
   color:#040c6b;
-  margin:0 50px;
+  margin:0 80px;
 }
 
 .sourceCodeLink{
