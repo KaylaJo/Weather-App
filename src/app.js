@@ -1,4 +1,4 @@
-function getDate(timestamp){
+function findDate(timestamp){
 let now = new Date(timestamp);
 let days = [
   "Sun",
@@ -36,16 +36,16 @@ return `${day}, ${month} ${date}, ${hours}:${minutes}`;
 
 function formatDayForecast(timestamp){
   let date = new Date(timestamp * 1000);
-  let day = date.getDay();
   let days = [  
-  "Sun",
-  "Mon",
-  "Tue",
-  "Wed",
-  "Thu",
-  "Fri",
-  "Sat"
+    "Sun",
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat"
   ]
+  let day = date.getDay();
   return days [day];
 }
 
@@ -53,10 +53,12 @@ function formatDayForecast(timestamp){
 function showWeekAheadForecast(response) {
  let forecast = response.data.daily;
  let weekAheadForecast = document.querySelector("#weekAhead-Forecast");
+ console.log(response.data);
+ console.log(response.data.timezone_offset);
  
  let weekAheadForecastHTML = `<div class=" row weekAhead">`;
   forecast.forEach(function (forecastDay, index){  
-    if (index < 6) { 
+    if (index!==0 & index < 7) { 
   weekAheadForecastHTML = weekAheadForecastHTML + ` 
    <div class="col-2 weekForecast">
    ${formatDayForecast(forecastDay.dt)} <br />
@@ -74,7 +76,7 @@ function showWeekAheadForecast(response) {
 
 function getForecast(coordinates) {
   let apiKey = "58a6775f97527351bf6c6966e209be39";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&exclude={current,minutely,hourly,alerts}&appid=${apiKey}&units=imperial`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&exclude={minutely,hourly,alerts}&appid=${apiKey}&units=imperial`;
   
   axios.get(apiUrl).then(showWeekAheadForecast);
 }
@@ -109,8 +111,8 @@ function getTemp(response) {
   let local = utc + 1000 * response.data.timezone;
   let cityTime = new Date(local);
 
-  let timeElement = document.querySelector("span.time");
-  timeElement.innerHTML = getDate(cityTime);
+  let time = document.querySelector("span.time");
+  time.innerHTML = findDate(cityTime);
   
   getForecast(response.data.coord);
 }
