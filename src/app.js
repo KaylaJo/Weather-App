@@ -34,21 +34,38 @@ return `${day}, ${month} ${date}, ${hours}:${minutes}`;
 
 }
 
+function formatDayForecast(timestamp){
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = [  
+  "Sun",
+  "Mon",
+  "Tue",
+  "Wed",
+  "Thu",
+  "Fri",
+  "Sat"
+  ]
+  return days [day];
+}
+
+
 function showWeekAheadForecast(response) {
-  console.log(response.data.daily);
+ let forecast = response.data.daily;
  let weekAheadForecast = document.querySelector("#weekAhead-Forecast");
-  
- let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+ 
  let weekAheadForecastHTML = `<div class=" row weekAhead">`;
- days.forEach(function (day){    
+  forecast.forEach(function (forecastDay, index){  
+    if (index < 6) { 
   weekAheadForecastHTML = weekAheadForecastHTML + ` 
    <div class="col-2 weekForecast">
-   ${day} <br />
-   <span class="high">76°</span>
-   <span class="low">63°</span><br />
-   <div class="icon"><img src="https://img.icons8.com/ios/50/000000/clouds.png"/></div>
+   ${formatDayForecast(forecastDay.dt)} <br />
+   <span class="high">${Math.round(forecastDay.temp.max)}°</span>
+   <span class="low">${Math.round(forecastDay.temp.min)}°</span><br />
+   <div class="icon"><img src = "icons/${forecastDay.weather[0].icon}.png"/>;</div>
    </div>
    `;
+    }
   });
    
  weekAheadForecastHTML = weekAheadForecastHTML + `</div>`;
