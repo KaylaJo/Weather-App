@@ -29,7 +29,6 @@ let hours = now.getHours();
 let date = now.getDate();
 let minutes = (`0` + now.getMinutes()).slice(-2);
 
-let currentTime = document.querySelector("span.time");
 return `${day}, ${month} ${date}, ${hours}:${minutes}`;
 
 }
@@ -53,18 +52,16 @@ function formatDayForecast(timestamp){
 function showWeekAheadForecast(response) {
  let forecast = response.data.daily;
  let weekAheadForecast = document.querySelector("#weekAhead-Forecast");
- console.log(response.data);
- console.log(response.data.timezone_offset);
  
  let weekAheadForecastHTML = `<div class=" row weekAhead">`;
-  forecast.forEach(function (forecastDay, index){  
+  forecast.forEach(function (forecast, index){  
     if (index!==0 & index < 7) { 
   weekAheadForecastHTML = weekAheadForecastHTML + ` 
    <div class="col-2 weekForecast">
-   ${formatDayForecast(forecastDay.dt)} <br />
-   <span class="weekHigh">${Math.round(forecastDay.temp.max)}°</span>
-   <span class="weekLow">${Math.round(forecastDay.temp.min)}°</span><br />
-   <div class="weekIcon"><img src = "icons/${forecastDay.weather[0].icon}.png"/></div>
+    ${formatDayForecast(forecast.dt)} <br />
+    <span class="weekHigh">${Math.round(forecast.temp.max)}°</span>
+    <span class="weekLow">${Math.round(forecast.temp.min)}°</span><br />
+    <div class="weekIcon"><img src = "icons/${forecast.weather[0].icon}.png"/></div>
    </div>
    `;
     }
