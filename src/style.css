@@ -87,7 +87,7 @@ span.time {
 }
 
 .todayWeather {
-  padding: 27px;
+  padding: 25px;
   text-align:center;
   background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
   border: 1px solid #ffcef3;
@@ -134,7 +134,7 @@ h4 {
   margin:8px 0px ;
   border-radius: 50%;
   text-align: Center;
-  padding: 7px;
+  padding: 6.5px;
   background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
 
