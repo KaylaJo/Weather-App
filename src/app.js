@@ -30,7 +30,6 @@ let date = now.getDate();
 let minutes = (`0` + now.getMinutes()).slice(-2);
 
 return `${day}, ${month} ${date}, ${hours}:${minutes}`;
-
 }
 
 function formatDayForecast(timestamp){
@@ -114,7 +113,6 @@ function getTemp(response) {
   let local = utc + 1000 * response.data.timezone;
   let cityTime = new Date(local);
 
-
   let time = document.querySelector("span.time");
   time.innerHTML = findDate(cityTime);
   
@@ -154,7 +152,6 @@ function getCurrentLocation() {
 
 let button = document.querySelector(".locationButton");
 button.addEventListener("click", getCurrentLocation);
-
 
 let timezone = null;
 

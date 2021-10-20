@@ -71,7 +71,6 @@ span.time {
   color: #040c6b;
   font-size: 22px;
   margin:0;
- 
 }
 
 .humidity {
@@ -109,17 +108,11 @@ h4 {
 
 .degreeUnits{
   position: relative; 
-  top:-13px; 
-}
-
-.degreeUnits .active {
-  cursor:default;
-  text-decoration: none;
+  top:-11px; 
 }
 
 #fahrenheit {
   color: #040c6b;
-}
   font-size: 22px;
 }
 
