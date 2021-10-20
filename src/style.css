@@ -1,6 +1,6 @@
 .app-wrapper {
   padding: 10px 10px;
-  max-width: 930px;
+  max-width: 645px;
   font-family: "Urbanist", sans-serif;
   margin: 20px auto;
 }
@@ -13,7 +13,8 @@
     109.6deg,
     rgb(245, 239, 249) 30.1%,
     rgb(207, 211, 236) 100.2%
-  ); 
+  )
+; 
 }
 
 .searchBar {
@@ -21,24 +22,24 @@
 } 
 
 .form-control {
-  border: 2px solid #ffcef3;
+  border: 1px solid #ffcef3;
   border-radius: 45px;
   background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-  padding: 10px;
+  padding: 7px;
 }
 
 .searchButton {
-  border: 2px solid#ffcef3;
+  border: 1px solid#ffcef3;
   background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
   border-radius: 50%;
-  padding: 10px;
+  padding: 7px;
 }
 
 .locationButton {
-  border: 2px solid#ffcef3;
+  border: 1px solid#ffcef3;
   background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
   border-radius: 50%;
-  padding: 10px;
+  padding: 7px;
 }
 
 .searchIcons img{
@@ -46,18 +47,17 @@
 }
 
 .currentWeather {
-  padding: 10px 210px
+  padding: 15px  120px 15px 120px;
 }
 
 .currentInfo {
-  margin: 20px 0px 20px 0px;
   padding: 10px 0px;
   text-align:center;
 }
 
 .cityName {
   color: #040c6b;
-  font-size: 37px;
+  font-size: 28px;
   margin: 0;
   font-weight: bold;
 }
@@ -92,30 +92,31 @@ span.time {
 }
 
 .todayWeather {
-  margin: 20px 0px 20px 0px;
-  padding: 10px 0px;
+  padding: 27px;
   text-align:center;
-  
+  background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  border: 1px solid #ffcef3;
+  border-radius: 50%;
 }
 
 h4 {
   color: #040c6b;
-  font-size: 27px;
-  margin: 5px 0 5px 0;
-  padding: 10px 0 0 0;
+  font-size: 22px;
+  padding: 0;
+  margin: 5px;
+  
 }
 
 .todayTemp {
   display: inline;
   color: #dab4fe;
-  font-size: 45px;
-  padding: 0 0 7px 0;
+  font-size: 40px;
   
 }
 
 .degreeUnits{
   position: relative; 
-  top:-15px; 
+  top:-13px; 
 }
 
 .degreeUnits .active {
@@ -125,59 +126,59 @@ h4 {
 
 #fahrenheit {
   color: #040c6b;
-  font-size: 22px;
+  font-size: 20px;
  
 }
 
 span.divide {
   color: #040c6b;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 #celsius {
   color: #040c6b;
-  font-size: 22px;
+  font-size: 20px;
 }
 
-h6 {
+.low {
   color: #040c6b;
   font-size: 22px;
-  padding: 5px 0;
-  margin:0 ;
+  margin: 5px;
 }
 
 .lowTemp {
   color: #96abff;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .weekForecast {
   color: #040c6b;
   border: 1px solid #ffcef3;
-  font-size: 20px;
-  margin:1px 0px ;
+  font-size: 17px;
+  margin:8px 0px ;
   border-radius: 50%;
   text-align: Center;
-  padding: 30px 0px;
+  padding: 7px;
   background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
 
 .weekHigh {
   color: #dab4fe;
-  padding: 7px;
+  padding: 5px;
 }
 
 .weekLow {
   color: #96abff;
-  padding: 7px;
+  padding: 5px;
 }
 
 .sourceLine{
-  font-size: 18px;
+  font-size: 14px;
   text-align:center;
   display:inline;
   color:#040c6b;
-  margin:0 80px;
+  margin: 15px;
+  
 }
 
 .sourceCodeLink{
