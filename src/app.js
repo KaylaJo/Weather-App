@@ -34,7 +34,20 @@ return `${day}, ${month} ${date}, ${hours}:${minutes}`;
 }
 
 function formatDayForecast(timestamp){
-  let date = new Date(timestamp * 1000);
+  let date = new Date(timestamp*1000);
+  console.log(date);
+  let localTime = date.getTime();
+  console.log(localTime);
+  let localOffset = date.getTimezoneOffset() * 60000;
+  console.log(localOffset);
+  let utc = localTime + localOffset;
+  console.log(utc);
+  let local = utc + 1000 * timezone;
+  console.log(local);
+  let cityTime = new Date(local);
+  console.log(cityTime);
+   
+  let newdate = new Date(date);
   let days = [  
     "Sun",
     "Mon",
@@ -44,13 +57,15 @@ function formatDayForecast(timestamp){
     "Fri",
     "Sat"
   ]
-  let day = date.getDay();
+  let day = cityTime.getDay(cityTime);
   return days [day];
 }
 
 
 function showWeekAheadForecast(response) {
  let forecast = response.data.daily;
+ timezone = response.data.timezone_offset;
+ console.log(timezone);
  let weekAheadForecast = document.querySelector("#weekAhead-Forecast");
  
  let weekAheadForecastHTML = `<div class=" row weekAhead">`;
@@ -102,11 +117,17 @@ function getTemp(response) {
   todayIcon.innerHTML = `<img src = "icons/${mainIcon}.png"/>`;
 
   let now = new Date();
+  console.log(now);
   let localTime = now.getTime();
+  console.log(localTime);
   let localOffset = now.getTimezoneOffset() * 60000;
+  console.log(localOffset);
   let utc = localTime + localOffset;
+  console.log(utc);
   let local = utc + 1000 * response.data.timezone;
+  console.log(local);
   let cityTime = new Date(local);
+  console.log(cityTime);
 
   let time = document.querySelector("span.time");
   time.innerHTML = findDate(cityTime);
@@ -175,6 +196,7 @@ function convertFahrenheit(event) {
 
 let temperature = null;
 let todayLowTemp = null;
+let timezone = null;
 
 let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", convertCelsius);
