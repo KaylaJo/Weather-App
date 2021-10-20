@@ -97,10 +97,10 @@ function getTemp(response) {
   let wind = Math.round(response.data.wind.speed);
   let windSpeed = document.querySelector(".windSpeed");
   windSpeed.innerHTML = `Wind Speed: ${wind} mph `;
-  temperature = response.data.main.temp;
+  let temperature = response.data.main.temp;
   let todayTemp = document.querySelector(".todayTemp");
   todayTemp.innerHTML = `${Math.round(temperature)}°`;
-  todayLowTemp = response.data.main.temp_min;
+  let todayLowTemp = response.data.main.temp_min;
   let lowTemp = document.querySelector(".lowTemp");
   lowTemp.innerHTML = `${Math.round(todayLowTemp)}°`;
   let mainIcon = response.data.weather[0].icon;
@@ -156,39 +156,7 @@ let button = document.querySelector(".locationButton");
 button.addEventListener("click", getCurrentLocation);
 
 
-function convertCelsius(event) {
-  event.preventDefault();
-  celsius.classList.add("active");
-  fahrenheit.classList.remove("active");
-  let todayTemp = document.querySelector(".todayTemp");
-  let celsiusTemp = Math.round((temperature - 32) / 1.8);
-  todayTemp.innerHTML = `${celsiusTemp}°`;
-  let lowTemp = document.querySelector(".lowTemp");
-  let tonightCelsiusTemp = Math.round((todayLowTemp - 32) / 1.8);
-  lowTemp.innerHTML = `${tonightCelsiusTemp}°`;
-}
-
-function convertFahrenheit(event) {
-  event.preventDefault();
-  celsius.classList.remove("active");
-  fahrenheit.classList.add("active");
-  let todayTemp = document.querySelector(".todayTemp");
-  let FahrenheitTemp = Math.round(temperature);
-  todayTemp.innerHTML = `${FahrenheitTemp}°`;
-  let lowTemp = document.querySelector(".lowTemp");
-  let tonightFahrenheitTemp = Math.round(todayLowTemp);
-  lowTemp.innerHTML = `${tonightFahrenheitTemp}°`;
-}
-
-let temperature = null;
-let todayLowTemp = null;
 let timezone = null;
-
-let celsius = document.querySelector("#celsius");
-celsius.addEventListener("click", convertCelsius);
-
-let fahrenheit = document.querySelector("#fahrenheit");
-fahrenheit.addEventListener("click", convertFahrenheit);
 
 search("Chicago");
 
